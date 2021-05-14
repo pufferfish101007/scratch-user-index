@@ -29,6 +29,7 @@ const run = async () => {
     }
   };*/
   const checkUsr = async index => {
+    if (index >= users.length) return;
     let res = await fetch("https://api.scratch.mit.edu/users/" + users[index] + "/");
     if (res.status >= 400) {
       console.log(users[index], res.status);
